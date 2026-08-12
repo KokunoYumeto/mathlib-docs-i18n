@@ -1,0 +1,18 @@
+{
+  "schema": "mathlib-docs-upstream-lock/v1",
+  "observed_at_utc": "2026-08-12T19:57:48Z",
+  "repository": "https://github.com/leanprover-community/mathlib4",
+  "literal_fork": "https://github.com/KokunoYumeto/mathlib4",
+  "default_branch": "master",
+  "commit": "0698b5ef086b71bfc4fe795e0a713d745094e19f",
+  "tree": "57f5b41051be96ffe5298662843e1251e4466a8f",
+  "license": {
+    "spdx": "Apache-2.0",
+    "path": "LICENSE",
+    "git_blob_sha1": "8dada3edaf50dbc082c9a125058f25def75e625a",
+    "bytes": 11357,
+    "sha256": "B40930BBCF80744C86C46A12BC9DA056641D722716C378F5659B9E555EF833E1",
+    "raw_url": "https://raw.githubusercontent.com/leanprover-community/mathlib4/0698b5ef086b71bfc4fe795e0a713d745094e19f/LICENSE"
+  }
+}
+

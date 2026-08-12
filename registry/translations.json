@@ -1,0 +1,13 @@
+{
+  "$schema": "../schemas/translation-record.schema.json",
+  "schema": "mathlib-docs-translation-registry/v1",
+  "updated_at_utc": "2026-08-12T19:57:48Z",
+  "source_id_policy": {
+    "declarations": "decl:<fully-qualified-Lean-declaration-name>",
+    "module_prose": "module:<Lean-module-path>#sha256:<source-fragment-sha256>",
+    "silent_identifier_reuse": false
+  },
+  "edition_label": "independently_maintained_ai_produced_no_upstream_endorsement",
+  "records": []
+}
+

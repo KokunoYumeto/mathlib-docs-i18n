@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/KokunoYumeto/mathlib-docs-i18n/raw/main/schemas/translation-record.schema.json",
+  "title": "mathlib documentation translation registry",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "updated_at_utc", "source_id_policy", "edition_label", "records"],
+  "properties": {
+    "$schema": {"type": "string"},
+    "schema": {"const": "mathlib-docs-translation-registry/v1"},
+    "updated_at_utc": {"type": "string", "format": "date-time"},
+    "source_id_policy": {"type": "object"},
+    "edition_label": {"const": "independently_maintained_ai_produced_no_upstream_endorsement"},
+    "records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["record_id", "source_id", "content_kind", "upstream_repository", "upstream_commit", "source_file", "source_sha256", "locale", "translation_path", "translation_sha256", "terminology_receipt", "formal_code_changed", "ai_produced", "upstream_endorsement", "status"],
+        "properties": {
+          "record_id": {"type": "string", "minLength": 1},
+          "source_id": {"type": "string", "pattern": "^(decl:|module:).+"},
+          "content_kind": {"enum": ["declaration_docstring", "theorem_explanation", "module_documentation", "tutorial_note"]},
+          "upstream_repository": {"type": "string", "format": "uri"},
+          "upstream_commit": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+          "source_file": {"type": "string", "minLength": 1},
+          "source_sha256": {"type": "string", "pattern": "^[0-9A-F]{64}$"},
+          "locale": {"type": "string", "minLength": 2},
+          "translation_path": {"type": "string", "minLength": 1},
+          "translation_sha256": {"type": "string", "pattern": "^[0-9A-F]{64}$"},
+          "terminology_receipt": {"type": "string", "minLength": 1},
+          "formal_code_changed": {"const": false},
+          "ai_produced": {"const": true},
+          "upstream_endorsement": {"const": false},
+          "status": {"enum": ["draft", "verified", "superseded", "rejected"]}
+        }
+      }
+    }
+  }
+}
+

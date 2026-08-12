@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/KokunoYumeto/mathlib-docs-i18n/raw/main/schemas/release-manifest.schema.json",
+  "title": "mathlib docs translation release registry",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "updated_at_utc", "releases"],
+  "properties": {
+    "$schema": {"type": "string"},
+    "schema": {"const": "mathlib-docs-release-registry/v1"},
+    "updated_at_utc": {"type": "string", "format": "date-time"},
+    "releases": {"type": "array", "items": {"type": "object"}}
+  }
+}
+
