@@ -32,10 +32,11 @@
           "formal_code_changed": {"const": false},
           "ai_produced": {"const": true},
           "upstream_endorsement": {"const": false},
-          "status": {"enum": ["draft", "verified", "superseded", "rejected"]}
+          "status": {"enum": ["draft", "verified", "superseded", "rejected"]},
+          "supersedes_record_id": {"type": ["string", "null"]},
+          "superseded_by_record_id": {"type": ["string", "null"]}
         }
       }
     }
   }
 }
-
